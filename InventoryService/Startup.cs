@@ -35,7 +35,7 @@ namespace InventoryService
                 config.UsingRabbitMq((ctx, cfg) => {
                     cfg.Host("amqp://guest:guest@localhost:5672");
 
-                    cfg.ReceiveEndpoint("order-queue", c => {
+                    cfg.ReceiveEndpoint("padauk_api", c => {
                         c.ConfigureConsumer<OrderConsumer>(ctx);
                     });
                 });
